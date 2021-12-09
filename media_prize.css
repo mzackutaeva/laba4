@@ -1,0 +1,90 @@
+/*Блок с высотой 300 пикселей и поделен на 1/2 части экрана по 47% (внутри отступы)*/
+.banner_media_two_300{
+/*ширина блока*/
+width:47%;
+/*Высота блока*/
+height:300px;
+/*Показывать как inline-block*/
+display:inline-block;
+/*Отступ со всех сторон*/
+padding:5px;
+/*Выравнивание по центру того, что внутри*/
+text-align:center;
+/*Закругление границ*/
+border-radius:5px;
+}
+
+/*Блок с высотой 300 пикселей и занимает 90% части экрана*/
+.banner_media_one_300{
+width:90%;
+height:300px;
+display:inline-block;
+padding:5px;
+text-align:center;
+border-radius:5px;
+}
+/*Стили наведения на блок с классом banner_media_two_300*/
+.banner_media_two_300:hover{
+box-shadow: 0 0 5px 2px;
+}
+/*Стили наведения на блок с классом banner_media_one_300*/
+.banner_media_one_300:hover{
+box-shadow: 0 0 5px 2px;
+}
+
+/*Медиа стили*/
+/*Экраны, которые меньше телефонов*/
+@media screen and (max-width: 320px) {
+/*Не показывать блок с классом banner_main*/
+.banner_main{
+display:none;
+}
+/*Ширина блока с классом banner_media_two_300 будет равна 100%*/
+.banner_media_two_300{
+width:100%;
+}
+}
+
+/*Экраны телефонов*/
+@media screen and (min-width: 320px) and (max-width: 768px)  {
+/*Блок с классом banner_main будет содержать изображение с телефоном*/
+.banner_main{
+content:url("img/phone_banner.png");
+}
+/*Ширина блока с классом banner_media_two_300 будет равна 100%*/
+.banner_media_two_300{
+width:100%;
+}
+/*Блок с классом disable_max_phone будет скрыт*/
+.disable_max_phone{
+display:none;
+}
+}
+
+/*Экраны планшетов*/
+@media screen and (min-width: 768px) and (max-width: 1000px)  {
+/*Блок с классом banner_main будет содержать изображение с планшетом*/
+.banner_main{
+content:url("img/tablet_banner.png");
+}
+/*Блок с классом disable_max_phone будет скрыт*/
+.disable_max_phone{
+display:none;
+}
+}
+
+/*Обычные экраны компьютера*/
+@media screen and (min-width: 1000px) and (max-width: 1280px)  {
+/*Блок с классом banner_main будет содержать изображение с обычным экраном компьютера*/
+.banner_main{
+content:url("img/small_desktop_banner.png");
+}
+}
+
+/*Широкие экраны компьютера*/
+@media screen and (min-width: 1280px)  {
+/*Блок с классом banner_main будет содержать изображение с широким экраном компьютера*/
+.banner_main{
+content:url("img/big_desktop_banner.png");
+}
+}
